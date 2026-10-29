@@ -1,0 +1,14 @@
+*.py[cod]
+.web
+*.db
+assets/external/
+assets/upload/
+uploaded_files/
+.states
+.venv/
+__pycache__/
+*.pyc
+.web/
+reflex.db
+.env
+.DS_Store

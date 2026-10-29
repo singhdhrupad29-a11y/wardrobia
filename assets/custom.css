@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap");
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #faf8f3;
+  color: #292524;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #1c1917;
+}
+
+/* ── sticky top navigation bar ─────────────────────────────────────────────── */
+
+.site-nav {
+  background: rgba(250, 248, 243, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e8e3d6;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 32px;
+  padding: 0 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #78716c;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.nav-link:hover {
+  background: rgba(41, 37, 36, 0.06);
+  color: #292524;
+}
+.nav-link-active,
+.nav-link-active:hover {
+  background: #191610;
+  color: #f8f8f8 !important;
+  font-weight: 600;
+}
+
+/* Nav labels collapse to icons on small screens, like the reference. */
+.nav-label {
+  display: none;
+}
+@media (min-width: 640px) {
+  .nav-label {
+    display: inline;
+  }
+}
+
+/* Tiny uppercase eyebrow labels. */
+.micro-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #78716c;
+}
+
+/* ── cards & panels ────────────────────────────────────────────────────────── */
+
+/* Primary action button — dark ink, matching the reference --primary. */
+.btn-primary {
+  background: #191610 !important;
+  color: #f8f8f8 !important;
+  border: 1px solid #191610 !important;
+  box-shadow: 0 1px 3px rgba(25, 22, 16, 0.25);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.btn-primary:hover {
+  background: #2a2620 !important;
+  transform: translateY(-1px);
+}
+
+/* Flat white dashboard card (stat cards, laundry queue, recent wears). */
+.dashboard-card {
+  background: #ffffff;
+  border: 1px solid #e8e3d6;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(41, 37, 36, 0.04), 0 2px 6px rgba(41, 37, 36, 0.03);
+}
+
+/* Soft glass/sand filter panel used by the Wardrobe + Outfits views. */
+.glass {
+  background: #ffffff;
+  border: 1px solid #e8e3d6;
+  border-radius: 16px;
+}
+
+/* Soft, flat card shadow (no neon bloom). */
+.rx-card {
+  box-shadow: 0 1px 2px rgba(41, 37, 36, 0.04), 0 2px 6px rgba(41, 37, 36, 0.03);
+}
+
+/* ── lists & feeds ─────────────────────────────────────────────────────────── */
+
+/* Divide-y feed used by Laundry queue and Recent wears. */
+.wear-feed > * {
+  padding: 0.85em 0;
+  border-bottom: 1px solid #f0ece2;
+}
+.wear-feed > *:first-child {
+  padding-top: 0;
+}
+.wear-feed > *:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Tabular mono dates in the recent-wears feed. */
+.mono-date {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── wardrobe item cards ───────────────────────────────────────────────────── */
+
+.item-card {
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.item-card:hover {
+  border-color: #b8b1a4 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(41, 37, 36, 0.1);
+}
+
+.outfit-card {
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.outfit-card:hover {
+  border-color: #b8b1a4 !important;
+  transform: translateY(-2px);
+}
+
+/* Pills (badges) */
+.pill {
+  border-radius: 999px;
+}
+
+/* Upload dropzone */
+.upload-dropzone {
+  border: 1px dashed #cdc6b4;
+  border-radius: 12px;
+  background: #f6f3ea;
+  cursor: pointer;
+}
+.upload-dropzone:hover {
+  border-color: #a8a18d;
+  background: #f1ede0;
+}
+
+::selection {
+  background: rgba(25, 22, 16, 0.16);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 135, 125, 0.35);
+  border-radius: 999px;
+}
